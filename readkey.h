@@ -15,7 +15,7 @@ extern "C" {
 static char read_key();
 
 #ifdef _WIN32
-char read_key() {
+static char read_key() {
     HANDLE hStdin ;
     INPUT_RECORD ir;
     DWORD cNumRead;
@@ -25,7 +25,6 @@ char read_key() {
 
     int max_iter = 10000;
     do {
-        printf("Max iter: %d", max_iter);
         if(!ReadConsoleInput(
             hStdin,
             &ir,
