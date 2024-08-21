@@ -12,6 +12,10 @@
 extern "C" {
 #endif
 
+/**
+ * @brief Reads a key input from the terminal.
+ * @return the ASCII value of the key on success, -1 otherwise.
+*/
 static char read_key();
 
 #ifdef _WIN32
